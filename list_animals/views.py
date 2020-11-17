@@ -13,7 +13,7 @@ class HomePageView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["animal_data"] = Animal.objects.all()
-        context["title"] = "Приют домашних животных - Главная страница"
+        context["title"] = "- Главная страница"
         return context
 
 
@@ -25,7 +25,7 @@ class ListAnimalsPageView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["title"] = "Приют домашних животных - Список животных"
+        context["title"] = "- Список животных"
         return context
 
 
@@ -40,5 +40,5 @@ class ContactsView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["title"] = "Приют домашних животных - Контакты"
+        context["title"] = "- Контакты"
         return context
