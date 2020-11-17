@@ -1,0 +1,6 @@
+{
+  "name": "Animal shlter",
+  "description": "Demonstrarion websiite",
+  "image": "heroku/python",
+  "keywords": ["python", "django" ]
+}

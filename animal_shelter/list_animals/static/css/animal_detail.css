@@ -1,0 +1,44 @@
+.animal-detail-block {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+
+.animal-detail-block-img {
+    max-width: 45%;
+}
+
+.animal-detail-block-img img {
+    width: 100%;
+}
+
+.animal-detail-block-info {
+    margin-left: 25px;
+    max-width: 45%;
+}
+
+.title-strong {
+    font-weight: bold;
+}
+
+@media (min-width: 350px) and (max-width: 1000px) {
+    .animal-detail-block {
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+
+    .animal-detail-block-info {
+        margin-top: 20px;
+    }
+
+    .animal-detail-block-img {
+        max-width: 95%;
+    }
+
+    .animal-detail-block-info {
+        margin-left: 0;
+        max-width: 95%;
+    }
+
+}

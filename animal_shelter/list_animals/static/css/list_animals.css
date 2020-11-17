@@ -1,0 +1,45 @@
+.grid-list-animals {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(290px, 1fr));
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+}
+
+.animal-block-shadow {
+    margin-bottom: 0!important;;
+}
+
+.animal-block-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+}
+
+.animal-block-img img {
+    max-width: 250px;
+    max-height: 250px;
+}
+.animal-block-info {
+    padding: 5px;
+}
+
+.animal-block-info p {
+    margin: 0;
+}
+
+.animal-block-btn {
+    margin: 5px;
+}
+
+@media (min-width: 350px) and (max-width: 1550px) {
+    .grid-list-animals {
+        grid-template-columns: repeat(2, minmax(290px, 1fr));
+    }
+}
+
+@media (min-width: 350px) and (max-width: 960px) {
+    .grid-list-animals {
+        grid-template-columns: repeat(1, minmax(290px, 1fr));
+    }
+}

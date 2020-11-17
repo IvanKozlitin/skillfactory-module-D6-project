@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block extra_head %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static "css/animal_detail.css" %}">
+{% endblock extra_head %}
+
+{% block animal_detail %}
+    <div class="row">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8">
+            <h2 class="page-title">Подробнее о питомце</h2>
+            <hr>
+            <div class="animal-detail-block">
+                <div class="animal-detail-block-img">
+                    <img src="{{animal_data.photo.url}}" alt="Фото питомца по имени: {{ animal_data.name }}">
+                </div>
+                <div class="animal-detail-block-info">
+                    <h3>Кличка: {{ animal_data.name }}</h3>
+                    <p><span class="title-strong">Пол:</span> {{ animal_data.gender }}</p>
+                    {% if animal_data.breed %}
+                        <p><span class="title-strong">Порода:</span> {{ animal_data.breed }}</p>
+                    {% endif %}
+                    {% if animal_data.age %}
+                        <p><span class="title-strong">Возраст:</span> {{ animal_data.age }}</p>
+                    {% endif %}
+                    {% if animal_data.receipt_date %}
+                        <p><span class="title-strong">Дата поступления:</span> {{ animal_data.receipt_date }}</p>
+                    {% endif %}
+                    <p><span class="title-strong">Описание:</span><br>{{ animal_data.description }}</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-2">
+        </div>
+    </div>
+{% endblock %}
